@@ -30,6 +30,7 @@ function makeMessage(input) {
 
 		}
 	}
+	return errorMessage;
 }
 
 function descriptionValue(key, input) {
