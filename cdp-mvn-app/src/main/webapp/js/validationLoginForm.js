@@ -19,17 +19,17 @@ function validateForm(src) {
 }
 function makeMessage(input) {
 	var errorMessage = '';
-	if (!input.validity.valid) {
-		var key;
-		for (key in input.validity) {
-			if (input.validity[key] && errorMessages[key]) {
-				errorMessage = input.placeholder + errorMessages[key]
-						+ descriptionValue(key, input);
+	if (input.validity.valid) {
+		return errorMessage;
+	}
+	var key;
+	for (key in input.validity) {
+		if (input.validity[key] && errorMessages[key]) {
+			errorMessage = input.placeholder + errorMessages[key]
+					+ descriptionValue(key, input);
 
-			}
 		}
 	}
-	return errorMessage;
 }
 
 function descriptionValue(key, input) {
