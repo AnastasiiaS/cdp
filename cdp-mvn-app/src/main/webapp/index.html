@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login page</title>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+
+
+<div class="login_form">
+	<form name="login">
+	
+			<input type="text" name="username" placeholder="Username"
+			pattern="[a-zA-Z0-9_-]{6,12}" autofocus required/> 
+			
+			<input type="password" name="password" placeholder="Password"
+			pattern="[a-zA-Z0-9_-]{6,12}" autofocus required/> 
+			
+			<input type="submit" class="btn" value="Login">
+	</form>
+</div>
+<script type="text/javascript" src="js/validationLoginForm.js"></script>
+</body>
+</html>
