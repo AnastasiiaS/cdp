@@ -10,13 +10,13 @@
 
 
 <div class="login_form">
-	<form name="login">
+	<form id="login">
 	
 			<input type="text" name="username" placeholder="Username"
-			pattern="[a-zA-Z0-9_-]{6,12}" autofocus required/> 
+			pattern="^(?=.*\d)(?=.*[a-zA-Z]).{4,10}"  required/> 
 			
 			<input type="password" name="password" placeholder="Password"
-			pattern="[a-zA-Z0-9_-]{6,12}" autofocus required/> 
+			pattern="^.{6,12}" required/> 
 			
 			<input type="submit" class="btn" value="Login">
 	</form>
