@@ -1,6 +1,6 @@
 package epam.kh.cdp.semenova;
 
-public class HelloWorld {
+public class HelloSpring {
 	 private String message;
 
 	   public void setMessage(String message){

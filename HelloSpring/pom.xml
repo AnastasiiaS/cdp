@@ -67,7 +67,7 @@
 				</executions>
 				<configuration>
 					<descriptors>
-						<descriptor>src/main/resources/zipCode.xml</descriptor>
+						<descriptor>zipCode.xml</descriptor>
 					</descriptors>
 				</configuration>
 			</plugin>

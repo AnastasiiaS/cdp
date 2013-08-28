@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="helloWorld" class="epam.kh.cdp.semenova.HelloWorld">
+   <bean id="helloSpring" class="epam.kh.cdp.semenova.HelloSpring">
        <property name="message" value="Hello Spring!"/>
    </bean>
 
