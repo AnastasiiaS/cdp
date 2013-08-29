@@ -12,51 +12,10 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<configuration>
-					<outputDirectory>${project.build.directory}/lib/</outputDirectory>
-					<overWriteReleases>false</overWriteReleases>
-					<overWriteSnapshots>false</overWriteSnapshots>
-					<overWriteIfNewer>true</overWriteIfNewer>
-				</configuration>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<classpathLayoutType>simple</classpathLayoutType>
-							<mainClass>epam.kh.cdp.semenova.MainApp</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>${jdkVersion}</source>
-					<target>${jdkVersion}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.2.1</version>
 				<executions>
+
 					<execution>
 						<id>packSources</id>
 						<phase>package</phase>
@@ -64,8 +23,23 @@
 							<goal>single</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
 				</executions>
 				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>epam.kh.cdp.semenova.MainApp</mainClass>
+						</manifest>
+					</archive>
 					<descriptors>
 						<descriptor>zipCode.xml</descriptor>
 					</descriptors>
