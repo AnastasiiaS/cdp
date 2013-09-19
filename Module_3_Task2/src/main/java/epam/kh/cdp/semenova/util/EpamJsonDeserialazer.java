@@ -4,6 +4,7 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonDeserializationContext;
@@ -32,7 +33,7 @@ public class EpamJsonDeserialazer implements
 				mapToken.getType());
 
 		CitiesStatisticsByYears citiesStatisticsByYears = new CitiesStatisticsByYears();
-		Map<Integer, EmployeesStatisticsByCities> statByYears = new HashMap<Integer, EmployeesStatisticsByCities>();
+		Map<Integer, EmployeesStatisticsByCities> statByYears = new TreeMap<Integer, EmployeesStatisticsByCities>();
 		for (Map.Entry<String, Map<String, List<Integer>>> entryData : data
 				.entrySet()) {
 			Integer year = parseYear(entryData.getKey());
@@ -47,7 +48,7 @@ public class EpamJsonDeserialazer implements
 				employeesOnQuarters.setEmployeesQuantity(statByCity.getValue());
 				statByCities.put(city, employeesOnQuarters);
 			}
-			employeesStatosticsByCities.setStatosticsByCities(statByCities);
+			employeesStatosticsByCities.setStatisticsByCities(statByCities);
 			statByYears.put(year, employeesStatosticsByCities);
 		}
 

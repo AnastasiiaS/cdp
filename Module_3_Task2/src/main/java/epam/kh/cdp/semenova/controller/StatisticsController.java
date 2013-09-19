@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import epam.kh.cdp.semenova.bean.CitiesStatisticsByYears;
 import epam.kh.cdp.semenova.bean.YearsStatisticsByCities;
 import epam.kh.cdp.semenova.service.GrouppedService;
 import epam.kh.cdp.semenova.service.Service;
@@ -25,24 +26,28 @@ public class StatisticsController {
 
 	@RequestMapping(value = "/stat", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
-
-		YearsStatisticsByCities yearsStatisticsByCities = service
-				.getYearsStatisticsByCities();
-		Gson gson = new Gson();
-		String answ = gson.toJson(yearsStatisticsByCities);
-		model.addAttribute("message", answ);
-
 		return "statistics";
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/stat/getData", method = RequestMethod.GET)
-	public String getData() {
+	@RequestMapping(value = "/stat/getCitiesData", method = RequestMethod.POST)
+	public String getCitiesData() {
 
 		YearsStatisticsByCities yearsStatisticsByCities = service
 				.getYearsStatisticsByCities();
 		Gson gson = new Gson();
 		String answ = gson.toJson(yearsStatisticsByCities);
+		return answ;
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/stat/getYearData", method = RequestMethod.POST)
+	public String getYearData() {
+
+		CitiesStatisticsByYears citiesStatisticsByYears = service
+				.getCitiesStatisticsByYears();
+		Gson gson = new Gson();
+		String answ = gson.toJson(citiesStatisticsByYears);
 		return answ;
 	}
 

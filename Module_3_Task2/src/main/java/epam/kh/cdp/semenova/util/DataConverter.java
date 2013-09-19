@@ -24,7 +24,7 @@ public class DataConverter {
 		for (Entry<Integer, EmployeesStatisticsByCities> yearEntry : statisticsByYears
 				.getCitiesStatistics().entrySet()) {
 			for (Entry<City, EmployeesOnQuarters> cityEntry : yearEntry
-					.getValue().getStatosticsByCities().entrySet()) {
+					.getValue().getStatisticsByCities().entrySet()) {
 				City city = cityEntry.getKey();
 				if (!emplByCities.containsKey(city)) {
 					employeesStatisticsByYears = new EmployeesStatisticsByYears();

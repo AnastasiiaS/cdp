@@ -42,7 +42,7 @@ public class City implements Comparable<City> {
 
 	@Override
 	public String toString() {
-		return "City [cityName=" + cityName + "]";
+		return cityName;
 	}
 
 	public int compareTo(City o) {

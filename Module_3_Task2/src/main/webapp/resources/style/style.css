@@ -1,0 +1,97 @@
+body {
+	background: url("../images/main_bg.jpg") repeat-x scroll left top
+		transparent;
+	color: #585757;
+	font: 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+h3 {
+	color:gray;
+	font-size: 18px;
+	line-height: 19px;
+}
+
+h2 {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 15px 0 15px 0;
+	margin: 0px;
+	clear: both;
+}
+
+
+h1 {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+p {
+	padding: 5px 0 5px 0;
+	margin: 0px;
+	text-align: justify;
+	line-height: 19px;
+	font-size: 18px;
+}
+
+.wrap {
+	width: 90%;
+	margin: auto;
+}
+
+.header {
+	height: 50px;
+	margin: 50px auto 10px auto;
+	text-align: center;
+}
+
+.logo {
+	padding: 64px 0 0 64px;
+	float: left;
+}
+
+.box1 {
+	margin: 10px auto 20px 40px;
+	display: inline;
+	float: left;
+}
+
+.box2 {
+	margin: 10px 20px 20px auto;
+	display: inline;
+	float: right;
+}
+/*--------------home_center_content-----------------*/
+.home_center_content {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	/* 	height: 90%; */
+}
+
+#geo_chart {
+	display: inline;
+	float: left;
+	margin: 20px auto 20px auto;
+	width: 800px;
+	height: 500px;
+	box-shadow: 0 0 40px rgba(248, 248, 218, 1);
+}
+
+.center_text p {
+	color: #FFFFFF;
+	line-height: 21px;
+}
+
+#chart_stat_by_city {
+	display: inline;
+	float: right;
+	height: 230px;
+	margin: 20px auto 20px auto;
+	text-align: center;
+	width: 500px;
+}

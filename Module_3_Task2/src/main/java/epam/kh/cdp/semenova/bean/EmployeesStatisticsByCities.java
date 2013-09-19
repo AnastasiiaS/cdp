@@ -4,21 +4,21 @@ import java.util.Map;
 
 public class EmployeesStatisticsByCities {
 	
-	private Map<City, EmployeesOnQuarters>  statosticsByCities;
+	private Map<City, EmployeesOnQuarters>  statisticsByCities;
 
-	public Map<City, EmployeesOnQuarters> getStatosticsByCities() {
-		return statosticsByCities;
+	public Map<City, EmployeesOnQuarters> getStatisticsByCities() {
+		return statisticsByCities;
 	}
 
-	public void setStatosticsByCities(
-			Map<City, EmployeesOnQuarters> statosticsByCities) {
-		this.statosticsByCities = statosticsByCities;
+	public void setStatisticsByCities(
+			Map<City, EmployeesOnQuarters> statisticsByCities) {
+		this.statisticsByCities = statisticsByCities;
 	}
 
 	@Override
 	public String toString() {
-		return "EmployeesStatosticsByCities [statosticsByCities="
-				+ statosticsByCities + "]";
+		return "EmployeesStatisticsByCities [statisticsByCities="
+				+ statisticsByCities + "]";
 	}
 
 	
